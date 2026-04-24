@@ -113,20 +113,18 @@ In this step, I am preparing to connect to my EC2 instance so I can begin intera
 
 ### Connecting to EC2
 
-You said
-make it 156
+ 
 
-Gemini said
+
 To connect to an Amazon EC2 (Elastic Compute Cloud) instance, you most commonly use the Secure Shell (SSH) protocol for Linux or Remote Desktop Protocol (RDP) for Windows. This process requires a Key Pair, which consists of a public key stored on AWS and a private key file (usually .pem or .ppk) stored safely on your local machine.
 
 When you initiate a connection, your terminal uses the private key to prove your identity to the instance’s Public IPv4 address. For a standard Linux instance, the command typically follows the format ssh -i "key.pem" ec2-user@instance-ip. Crucially, the instance’s Security Group—acting as a virtual firewall—must have an inbound rule specifically allowing traffic on Port 22 for SSH. Without this permission, the connection will time out, ensuring that only authorized users with the correct credentials and network access can reach the server.                                                                                     
 
 ### This command required an IPv4 address
 
-You said
-What does a server's IPV4 DNS mean?...pls give me 159 words
+ 
 
-Gemini said
+
 An IPv4 DNS (Internet Protocol version 4 Domain Name System) acts as the digital "phonebook" for the internet. While humans use memorable domain names like google.com, computers communicate using numerical IP addresses. An IPv4 address specifically follows a 32-bit format, typically expressed as four sets of numbers ranging from 0 to 255, separated by periods (e.g., 192.168.1.1).
 
 When you enter a URL into a browser, the DNS server intercepts that request. It "resolves" or translates the alphabetical hostname into the corresponding IPv4 address. Without this service, you would have to memorize complex strings of numbers for every website you visit. Essentially, a server's IPv4 DNS settings tell the machine which database to consult to find the correct numerical destination for any web traffic. It is the bridge between human language and the binary-based routing infrastructure of the global web.           
@@ -137,9 +135,8 @@ When you enter a URL into a browser, the DNS server intercepts that request. It 
 
 ## Maven & Java
 
-### What I did in this step
+ 
 
-Gemini said
 To transform your EC2 instance into a functional web environment, you need a robust build tool and a reliable Java runtime. Apache Maven and Amazon Corretto 8 are the industry-standard duo for this task. Maven acts as your project’s architect; it automates the building, dependency management, and packaging of your Java applications. By using a pom.xml file, Maven ensures that every library your app needs is downloaded and configured correctly, saving you from manual setup headaches.
 
 Complementing Maven is Amazon Corretto 8, a no-cost, multiplatform, production-ready distribution of the Open Java Development Kit (OpenJDK). Developed by AWS, Corretto 8 provides a stable environment optimized for high-performance cloud applications. It is particularly valued for its long-term support and security fixes. Together, these tools allow you to compile source code into executable JAR or WAR files, bridging the gap between raw code and a live, accessible web application.             
